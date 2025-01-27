@@ -41,7 +41,7 @@ A Spring Boot REST API implementation for managing gym classes and bookings. The
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/verma1999/abc-ignite.git
    cd abc-ignite
    ```
 

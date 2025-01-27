@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "0766ec1c-bc0a-4e7a-a6f5-38f947ef59ce",
+		"name": "ABC_fitness",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14677215"
+	},
+	"item": [
+		{
+			"name": "booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"memberName\": \"adi\",\n    \"classId\": 2,\n    \"participationDate\": \"2025-02-03\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create gym class",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"yoga\",\n    \"startDate\": \"2025-01-25\",\n    \"endDate\": \"2025-02-04\",\n    \"startTime\": \"13:00:00\",\n    \"duration\": 60,\n    \"capacity\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/classes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"classes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "booking-search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"memberName\": \"adi\",\n    \"classId\": 1,\n    \"participationDate\": \"2025-01-28\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/bookings/search?memberName=raj&startDate=2025-01-29&endDate=2025-02-04",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings",
+						"search"
+					],
+					"query": [
+						{
+							"key": "memberName",
+							"value": "raj"
+						},
+						{
+							"key": "startDate",
+							"value": "2025-01-29"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-02-04"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gym-class",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"yoga\",\n    \"startDate\": \"2025-01-25\",\n    \"endDate\": \"2025-02-04\",\n    \"startTime\": \"13:00:00\",\n    \"duration\": 60,\n    \"capacity\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/classes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"classes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
